@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="70%" alt="Banner" src="https://github.com/user-attachments/assets/c2d8b00a-a2e4-4cd4-8974-e9e6a4dabfb9" />
+  <img width="80%" alt="Banner" src="https://github.com/user-attachments/assets/c2d8b00a-a2e4-4cd4-8974-e9e6a4dabfb9" />
 </p>
 
 <h1 align="center">PulmoScope</h1>
