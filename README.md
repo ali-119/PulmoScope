@@ -491,7 +491,10 @@ Distributed under the MIT License. See [`LICENSE`](LICENSE) for details.
 - Lung cancer survey dataset, Kaggle
 - TensorFlow / Keras, scikit-learn, FastAPI, OpenCV
 
-## Author
+---
 
-**Your Name**
-[LinkedIn](https://www.linkedin.com/in/your-profile) &nbsp;|&nbsp; [GitHub](https://github.com/your-username) &nbsp;|&nbsp; [Email](mailto:you@example.com)
+## Author ✍️
+**Author:** Ali  
+**Field:** Data Science & Machine Learning Student  
+**Email:** ali.hz87980@gmail.com  
+**GitHub:** [ali-119](https://github.com/ali-119)
