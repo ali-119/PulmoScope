@@ -1,6 +1,5 @@
-<!-- IMAGE TODO: docs/images/banner.png (1280x400 recommended) -->
 <p align="center">
-  <img src="docs/images/banner.png" alt="PulmoScope banner" width="100%">
+  <img width="70%" alt="Banner" src="https://github.com/user-attachments/assets/c2d8b00a-a2e4-4cd4-8974-e9e6a4dabfb9" />
 </p>
 
 <h1 align="center">PulmoScope</h1>
@@ -37,19 +36,18 @@
 ## Table of Contents
 
 1. [Overview](#overview)
-2. [Demo](#demo)
-3. [Key Features](#key-features)
-4. [System Architecture](#system-architecture)
-5. [Models and Methodology](#models-and-methodology)
-6. [Datasets](#datasets)
-7. [Results](#results)
-8. [Getting Started](#getting-started)
-9. [API Reference](#api-reference)
-10. [Project Structure](#project-structure)
-11. [Limitations and Responsible Use](#limitations-and-responsible-use)
-12. [Roadmap](#roadmap)
-13. [License](#license)
-14. [Author](#author)
+2. [Key Features](#key-features)
+3. [System Architecture](#system-architecture)
+4. [Models and Methodology](#models-and-methodology)
+5. [Datasets](#datasets)
+6. [Results](#results)
+7. [Getting Started](#getting-started)
+8. [API Reference](#api-reference)
+9. [Project Structure](#project-structure)
+10. [Limitations and Responsible Use](#limitations-and-responsible-use)
+11. [Roadmap](#roadmap)
+12. [License](#license)
+13. [Author](#author)
 
 ---
 
@@ -463,7 +461,7 @@ Distributed under the MIT License. See [`LICENSE`](LICENSE) for details.
 
 ---
 
-## Author ✍️
+## Author
 **Author:** Ali  
 **Field:** Data Science & Machine Learning Student  
 **Email:** ali.hz87980@gmail.com  
