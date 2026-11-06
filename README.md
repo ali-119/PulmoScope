@@ -76,24 +76,6 @@ Given a short patient questionnaire and one chest CT slice, the system:
 
 ---
 
-## Demo
-
-<!-- IMAGE TODO: docs/images/demo.gif  (screen recording of: fill form -> upload CT -> result with red overlay) -->
-<p align="center">
-  <img src="docs/images/demo.gif" alt="PulmoScope end-to-end demo" width="85%">
-</p>
-
-<!-- IMAGE TODO: three UI screenshots, same width/height for a clean row -->
-<table>
-  <tr>
-    <td align="center"><img src="docs/images/ui-input.png" alt="Input form" width="100%"><br><sub>Questionnaire and CT upload</sub></td>
-    <td align="center"><img src="docs/images/ui-result-suspicious.png" alt="Suspicious result" width="100%"><br><sub>Decision: Suspicious (both models agree)</sub></td>
-    <td align="center"><img src="docs/images/ui-result-uncertain.png" alt="Uncertain result" width="100%"><br><sub>Decision: Uncertain (models disagree)</sub></td>
-  </tr>
-</table>
-
----
-
 ## Key Features
 
 - **Multi-model decision pipeline.** Three models with different roles are combined through explicit, auditable rules rather than a single opaque score.
@@ -270,12 +252,6 @@ All figures below are taken from the training notebooks in this repository.
   <sub>At the default 0.5 threshold the classifier is conservative: only 2 of 90 normal slices are misclassified, while 30 of 130 abnormal slices are missed. The risk-adaptive 0.4 threshold exists to recover sensitivity for high-risk patients.</sub>
 </p>
 
-<!-- IMAGE TODO: docs/images/classification-training-curves.png (export the Plotly training/validation curves from the classification notebook) -->
-<p align="center">
-  <img src="docs/images/classification-training-curves.png" alt="Classifier training curves" width="70%"><br>
-  <sub>Classifier training and validation curves.</sub>
-</p>
-
 ### Nodule Segmenter (validation split, 61 slices from unseen scans)
 
 | Metric | Value |
@@ -289,12 +265,6 @@ Dice was stable at approximately 0.625 across thresholds from 0.3 to 0.7, indica
 <p align="center">
   <img src="docs/images/segmentation-predictions.png" alt="Segmentation predictions" width="92%"><br>
   <sub>Columns: input CT slice, ground-truth mask, predicted probability map, thresholded prediction. Larger nodules are recovered well; the first row shows a failure case, a very small (21 px) lesion missed entirely.</sub>
-</p>
-
-<!-- IMAGE TODO: docs/images/segmentation-training-curves.png (validation Dice per epoch) -->
-<p align="center">
-  <img src="docs/images/segmentation-training-curves.png" alt="Segmentation validation Dice per epoch" width="70%"><br>
-  <sub>Segmentation validation Dice over training epochs.</sub>
 </p>
 
 ### Questionnaire Risk Model (test split, 78 records)
