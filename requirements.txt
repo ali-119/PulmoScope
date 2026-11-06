@@ -1,0 +1,13 @@
+tensorflow
+keras
+numpy
+pandas
+scikit-learn
+joblib
+opencv-python-headless
+pillow
+pydantic
+fastapi
+uvicorn
+python-multipart
+requests
