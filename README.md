@@ -19,16 +19,6 @@
   <img src="https://img.shields.io/badge/Purpose-Educational%20Use%20Only-lightgrey?style=flat-square" alt="Educational use only">
 </p>
 
-<p align="center">
-  <a href="#overview">Overview</a> &nbsp;|&nbsp;
-  <a href="#system-architecture">Architecture</a> &nbsp;|&nbsp;
-  <a href="#models-and-methodology">Methodology</a> &nbsp;|&nbsp;
-  <a href="#results">Results</a> &nbsp;|&nbsp;
-  <a href="#getting-started">Getting Started</a> &nbsp;|&nbsp;
-  <a href="#api-reference">API</a> &nbsp;|&nbsp;
-  <a href="#limitations-and-responsible-use">Limitations</a>
-</p>
-
 > **Notice.** PulmoScope is a research and educational project. It is not a medical device and must not be used for diagnosis, screening decisions, or any clinical purpose. See [Limitations and Responsible Use](#limitations-and-responsible-use).
 
 ---
@@ -185,7 +175,7 @@ The sigmoid output corresponds to the `Normal` class because training used `clas
 | Skip connections | `block2a`, `block3a`, `block4a`, `block6a` expansion activations, plus a full-resolution shallow branch |
 | Decoder | Transposed-convolution blocks (256, 128, 64, 32 filters) with batch normalization |
 | Output | 512 x 512 sigmoid map, output bias initialized to -5 to counter extreme foreground sparsity |
-| Loss | Focal Tversky (alpha 0.7, beta 0.3, gamma 1.3), weighting false negatives over false positives |
+| Loss | Focal Tversky (alpha 0.7 on false positives, beta 0.3 on false negatives, gamma 1.3) |
 | Metric | Dice coefficient |
 | Optimizer | Adam, learning rate 3e-4, ReduceLROnPlateau, EarlyStopping on validation Dice |
 | Intensity handling | Hounsfield window of [-1000, 400] mapped to 0 to 255 |
@@ -433,7 +423,7 @@ This section documents known weaknesses so that results are interpreted correctl
 - **Weak clinical validity of the questionnaire.** The survey dataset is small and self-reported, and features such as peer pressure are statistical correlates in that dataset, not established clinical risk factors. The risk score is a simulation that shapes a threshold, not a clinical risk assessment.
 - **No demographic subgroup analysis.** Performance across age, sex, and ethnicity has not been evaluated.
 - **Benign and malignant are not distinguished.** They are merged into a single Abnormal class.
-
+- **Balanced validation set.** The segmenter was validated on a roughly balanced set (32 positive / 29 negative slices) with no held-out test split; false-positive counts on real scans, where nodules are rare, are expected to be higher.
 ---
 
 ## Roadmap
