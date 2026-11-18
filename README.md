@@ -278,18 +278,28 @@ The test set contains only 8 negative cases, so the minority-class figures carry
 - A GPU is recommended but not required for inference
 - Dependencies are listed in [`requirements.txt`](requirements.txt)
 
+
 ### Option A: Google Colab (recommended)
 
-1. Upload the repository to Colab (or mount it from Google Drive).
-2. Open `main.ipynb`.
-3. In the **Settings** cell, set `MODELS_DIR` to the location of the `Models/` folder and confirm the three model filenames.
-4. Run all cells from top to bottom.
-5. After the final cell, a link to the application appears together with an embedded view of the page. No account, token, or tunnelling service is required because Colab's own proxy is used.
+Run the following three commands in separate Colab cells:
+
+**1. Clone the repository**
+```bash
+!git clone https://github.com/ali-119/PulmoScope.git
+```
+**2. Navigate to the project directory**
+```bash
+%cd /content/PulmoScope
+```
+**3. Run the application**
+```bash
+%run main.py
+```
 
 ### Option B: Local machine
 
 ```bash
-git clone https://github.com/<your-username>/PulmoScope.git
+git clone https://github.com/ali-119/PulmoScope.git
 cd PulmoScope
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
