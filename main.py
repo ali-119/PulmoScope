@@ -14,7 +14,7 @@ Warning: This tool is for education only and is not a medical diagnosis.
 
 # 1) Settings
 # Models folder on Drive
-MODELS_DIR = '/content/PulmoScope-main/PulmoScope-main/Models'
+MODELS_DIR = '/content/PulmoScope-main/Models'
 CLS_MODEL_FILE = 'dl_classification_model.keras'      # classifier
 SEG_MODEL_FILE = 'dl_segmentation_model.keras'        # segmentation
 ML_MODEL_FILE  = 'ml_model.pkl'                       # ML model
